@@ -1,19 +1,25 @@
 import express from 'express';
-import AuthController from '../controllers/login';
+import AuthController from '../controllers/auth';
 
-// import {
-// 	validateVerificationBody,
-// 	validateLoginBody
-// } from '../../utils/validations/auth';
+import {
+	validateLoginBody
+} from '../utils/validations/auth';
 
 
 const router = express.Router();
 
 router.post(
 	'/login',
-	// validateLoginBody,
+	validateLoginBody,
 	AuthController.login,
 );
+
+router.post(
+	'/register',
+	validateLoginBody,
+	AuthController.register,
+);
+
 
 
 export default router;
