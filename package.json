@@ -1,0 +1,45 @@
+{
+  "name": "gtworld",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "nodemon --exec babel-node src/index.js",
+    "create": "npx sequelize-cli db:create",
+    "drop": "npx sequelize-cli db:drop",
+    "migrate": "npx sequelize-cli db:migrate",
+    "undo": "npx sequelize-cli db:migrate:undo",
+    "undo:all": "npx sequelize-cli db:migrate:undo:all",
+    "db:seed": "npx sequelize db:seed:all"
+  },
+  "keywords": [
+    "GTWorld"
+  ],
+  "author": "GTBank LLC",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.16",
+    "@babel/node": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/register": "^7.11.5",
+    "@babel/runtime": "^7.16.3",
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mariadb": "^2.5.5",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7",
+    "sequelize": "^6.9.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.16.4",
+    "babel-plugin-transform-runtime": "^6.23.0"
+  }
+}
